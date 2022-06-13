@@ -13,6 +13,7 @@
 		D3C6866F28574F5B005DE942 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3C6866D28574F5B005DE942 /* Main.storyboard */; };
 		D3C6867128574F5C005DE942 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3C6867028574F5C005DE942 /* Assets.xcassets */; };
 		D3C6867428574F5C005DE942 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3C6867228574F5C005DE942 /* LaunchScreen.storyboard */; };
+		D3C6867D285764AC005DE942 /* SetViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C6867C285764AC005DE942 /* SetViews.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		D3C6867028574F5C005DE942 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3C6867328574F5C005DE942 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D3C6867528574F5C005DE942 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3C6867C285764AC005DE942 /* SetViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetViews.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		D3C6866628574F5B005DE942 /* Kurly-Assignment */ = {
 			isa = PBXGroup;
 			children = (
+				D3C6867B285764A2005DE942 /* Protocols */,
 				D3C6866728574F5B005DE942 /* AppDelegate.swift */,
 				D3C6866928574F5B005DE942 /* SceneDelegate.swift */,
 				D3C6866B28574F5B005DE942 /* ViewController.swift */,
@@ -65,6 +68,14 @@
 				D3C6867528574F5C005DE942 /* Info.plist */,
 			);
 			path = "Kurly-Assignment";
+			sourceTree = "<group>";
+		};
+		D3C6867B285764A2005DE942 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D3C6867C285764AC005DE942 /* SetViews.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +152,7 @@
 				D3C6866C28574F5B005DE942 /* ViewController.swift in Sources */,
 				D3C6866828574F5B005DE942 /* AppDelegate.swift in Sources */,
 				D3C6866A28574F5B005DE942 /* SceneDelegate.swift in Sources */,
+				D3C6867D285764AC005DE942 /* SetViews.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
