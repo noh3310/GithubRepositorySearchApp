@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class HomeView: UIView {
+final class HomeView: UIView {
     
     let activityIndicator: UIActivityIndicatorView = {
         let activityIndicator = UIActivityIndicatorView()
@@ -28,7 +28,7 @@ class HomeView: UIView {
     
     let tableView: UITableView = {
         let tableView = UITableView()
-        tableView.register(RepoTableViewCell.self, forCellReuseIdentifier: RepoTableViewCell.identifier)
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.rowHeight = UITableView.automaticDimension
         return tableView
     }()
