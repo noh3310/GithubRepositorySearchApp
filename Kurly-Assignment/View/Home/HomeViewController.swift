@@ -36,9 +36,10 @@ final class HomeViewController: BaseViewController {
         self.navigationItem.searchController = self.homeView.searchController
         self.navigationItem.hidesSearchBarWhenScrolling = false
         
-        viewModel.repoData
-            .subscribe(onNext: { repo in
-                self.homeView.tableView.reloadData()
+        viewModel.tableViewValue
+            .subscribe(onNext: { [weak self] repoValue in
+                self?.homeView.activityIndicator.stopAnimating()
+                self?.homeView.tableView.reloadData()
             })
             .disposed(by: disposeBag)
     }
@@ -47,9 +48,16 @@ final class HomeViewController: BaseViewController {
 
 // MARK: Extension
 extension HomeViewController: UISearchResultsUpdating {
+    
     func updateSearchResults(for searchController: UISearchController) {
         if let searchText = searchController.searchBar.text {
-            viewModel.searchChar.accept(searchText)
+            // 검색하려는 값이 ViewModel과 다르면
+            if viewModel.searchChar.value != searchText {
+                viewModel.searchChar.accept(searchText)
+                if searchText != "" {
+                    homeView.activityIndicator.startAnimating()
+                }
+            }
         }
     }
 }
@@ -59,6 +67,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     // 마지막 셀에 도달했을 때 다음 API를 호출해 무한스크롤처럼 가능하도록 설정
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if indexPath.row + 1 == viewModel.tableViewValue.value.count {
+            homeView.activityIndicator.startAnimating()
             viewModel.addNumber()
         }
     }
@@ -68,6 +77,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: RepoTableViewCell.identifier, for: indexPath) as! RepoTableViewCell
         
         let row = viewModel.tableViewValue.value[indexPath.row]

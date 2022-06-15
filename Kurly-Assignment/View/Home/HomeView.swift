@@ -10,6 +10,15 @@ import SnapKit
 
 class HomeView: UIView {
     
+    let activityIndicator: UIActivityIndicatorView = {
+        let activityIndicator = UIActivityIndicatorView()
+
+        activityIndicator.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.stopAnimating()
+        return activityIndicator
+    }()
+    
     let searchController: UISearchController = {
         let searchController = UISearchController(searchResultsController: nil)
         searchController.searchBar.placeholder = "검색하고싶은 리포지토리를 입력하세요."
@@ -40,7 +49,7 @@ class HomeView: UIView {
 // MARK: Extension
 extension HomeView: SetViews {
     func addViews() {
-        [tableView].forEach {
+        [tableView, activityIndicator].forEach {
             self.addSubview($0)
         }
     }
@@ -48,6 +57,10 @@ extension HomeView: SetViews {
     func setLayout() {
         tableView.snp.makeConstraints {
             $0.edges.equalTo(super.safeAreaLayoutGuide)
+        }
+        
+        activityIndicator.snp.makeConstraints {
+            $0.center.equalToSuperview()
         }
     }
 }
