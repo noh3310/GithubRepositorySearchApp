@@ -27,6 +27,7 @@
 		D3C686F72859E48D005DE942 /* Repositorys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C686F62859E48D005DE942 /* Repositorys.swift */; };
 		D3C686F92859E4CA005DE942 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C686F82859E4CA005DE942 /* APIManager.swift */; };
 		D3C686FC2859EB27005DE942 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C686FB2859EB26005DE942 /* HomeViewModel.swift */; };
+		D3C68706285A3E96005DE942 /* ReactorKit in Frameworks */ = {isa = PBXBuildFile; productRef = D3C68705285A3E96005DE942 /* ReactorKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 			files = (
 				D3C686C72859C46F005DE942 /* Alamofire in Frameworks */,
 				D3C686C22859C44A005DE942 /* RxCocoa in Frameworks */,
+				D3C68706285A3E96005DE942 /* ReactorKit in Frameworks */,
 				D3C686BF2859C3E1005DE942 /* Kingfisher in Frameworks */,
 				D3C686CA2859C489005DE942 /* RxAlamofire in Frameworks */,
 				D3C686C42859C44A005DE942 /* RxSwift in Frameworks */,
@@ -166,6 +168,7 @@
 				D3C686C32859C44A005DE942 /* RxSwift */,
 				D3C686C62859C46F005DE942 /* Alamofire */,
 				D3C686C92859C489005DE942 /* RxAlamofire */,
+				D3C68705285A3E96005DE942 /* ReactorKit */,
 			);
 			productName = "Kurly-Assignment";
 			productReference = D3C6866428574F5B005DE942 /* Kurly-Assignment.app */;
@@ -201,6 +204,7 @@
 				D3C686C02859C44A005DE942 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				D3C686C52859C46F005DE942 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				D3C686C82859C489005DE942 /* XCRemoteSwiftPackageReference "RxAlamofire" */,
+				D3C68704285A3E96005DE942 /* XCRemoteSwiftPackageReference "ReactorKit" */,
 			);
 			productRefGroup = D3C6866528574F5B005DE942 /* Products */;
 			projectDirPath = "";
@@ -491,6 +495,14 @@
 				minimumVersion = 6.1.0;
 			};
 		};
+		D3C68704285A3E96005DE942 /* XCRemoteSwiftPackageReference "ReactorKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactorKit/ReactorKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -523,6 +535,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D3C686C82859C489005DE942 /* XCRemoteSwiftPackageReference "RxAlamofire" */;
 			productName = RxAlamofire;
+		};
+		D3C68705285A3E96005DE942 /* ReactorKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D3C68704285A3E96005DE942 /* XCRemoteSwiftPackageReference "ReactorKit" */;
+			productName = ReactorKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
