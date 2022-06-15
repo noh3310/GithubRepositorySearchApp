@@ -30,6 +30,7 @@ final class HomeViewController: BaseViewController {
         
         homeView.tableView.delegate = self
         homeView.tableView.dataSource = self
+        homeView.tableView.prefetchDataSource = self
         
         homeView.searchController.searchResultsUpdater = self
         
@@ -54,7 +55,20 @@ extension HomeViewController: UISearchResultsUpdating {
     }
 }
 
+extension HomeViewController:UITableViewDataSourcePrefetching {
+    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
+        indexPaths.forEach { indexPath in
+            // 마지막 셀 5개 이전에 도달했을 때
+            if indexPath.row + 5 > viewModel.repoData.value.items?.count ?? 0 {
+                // 다음 페이지 API 호출
+                
+            }
+        }
+    }
+}
+
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.repoData.value.items?.count ?? 0
     }
