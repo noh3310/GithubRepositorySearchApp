@@ -24,6 +24,7 @@
 		D3C686F12859D4D6005DE942 /* RepoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C686EE2859D4D6005DE942 /* RepoTableViewCell.swift */; };
 		D3C686F22859D4D6005DE942 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C686EF2859D4D6005DE942 /* HomeViewController.swift */; };
 		D3C686F52859E08D005DE942 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C686F42859E08D005DE942 /* APIKey.swift */; };
+		D3C686F72859E48D005DE942 /* Repositorys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C686F62859E48D005DE942 /* Repositorys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		D3C686EE2859D4D6005DE942 /* RepoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoTableViewCell.swift; sourceTree = "<group>"; };
 		D3C686EF2859D4D6005DE942 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D3C686F42859E08D005DE942 /* APIKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		D3C686F62859E48D005DE942 /* Repositorys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repositorys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				D3C686F42859E08D005DE942 /* APIKey.swift */,
+				D3C686F62859E48D005DE942 /* Repositorys.swift */,
 			);
 			path = APIManager;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3C686BA2859BD59005DE942 /* RxBind.swift in Sources */,
+				D3C686F72859E48D005DE942 /* Repositorys.swift in Sources */,
 				D3C6866828574F5B005DE942 /* AppDelegate.swift in Sources */,
 				D3C6866A28574F5B005DE942 /* SceneDelegate.swift in Sources */,
 				D3C686F22859D4D6005DE942 /* HomeViewController.swift in Sources */,
