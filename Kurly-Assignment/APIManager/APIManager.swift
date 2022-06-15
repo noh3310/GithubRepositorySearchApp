@@ -10,6 +10,16 @@ import RxSwift
 import Alamofire
 import RxAlamofire
 
+private enum GithubURL: String {
+    case searchRepository = "search/repositories"
+}
+
+extension GithubURL {
+    var url: URL {
+        URL(string: "https://api.github.com/" + self.rawValue)!
+    }
+}
+
 class APIManager {
     
     let headers: HTTPHeaders = [
@@ -17,29 +27,27 @@ class APIManager {
         "Authorization": "token \(APIKey.key)"
     ]
     
+    func parameters(_ searchValue: String, _ pageNo: Int) -> Parameters {
+        return [
+            "q": searchValue,
+            "per_page": "30",
+            "page": "\(pageNo)"
+        ]
+    }
+    
     var disposeBag = DisposeBag()
     
-    func searchRepo(_ searchValue: String) -> Observable<Repositorys> {
-        return Observable.create() { [self] emitter in
-            let task = RxAlamofire.requestData(.get, URL(string: "https://api.github.com/search/repositories?q=\(searchValue)")!, headers: headers)
-                .debug()
-                .subscribe { (header, data) in
-                    do {
-                        let decoder = JSONDecoder()
-                        let decodeData = try decoder.decode(Repositorys.self, from: data)
-                        print(decodeData)
-                        emitter.onNext(decodeData)
-                        emitter.onCompleted()
-                        //                    self.viewModel.repoData.accept(decodeData)
-                    } catch {
-                        print("decode error!")
-                    }
+    func searchRepo(_ parameters: Parameters) -> Observable<Repositorys?> {
+        return RxAlamofire.requestData(.get, GithubURL.searchRepository.url, parameters: parameters, headers: headers)
+            .map { (header, data) in
+                do {
+                    let decoder = JSONDecoder()
+                    let decodeData = try decoder.decode(Repositorys.self, from: data)
+                    return decodeData
+                } catch {
+                    print("decode error!")
                 }
-//                .disposed(by: disposeBag)
-            
-            return Disposables.create {
-                task.disposed(by: disposeBag)
+                return nil
             }
-        }
     }
 }

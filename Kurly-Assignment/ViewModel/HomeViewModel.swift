@@ -16,14 +16,21 @@ final class HomeViewModel {
         bind()
     }
     
+    private let apiManager = APIManager()
+    
     var searchChar = BehaviorRelay<String>(value: "")
+    var pageNumber = 1
     var repoData = BehaviorRelay<Repositorys>(value: Repositorys(incompleteResults: nil, items: nil, totalCount: nil))
     
     var disposeBag = DisposeBag()
     
     private func fetchRepo() {
-        APIManager().searchRepo(searchChar.value)
-            .bind(to: repoData)
+        apiManager.searchRepo(apiManager.parameters(searchChar.value, pageNumber))
+            .subscribe(onNext: { repo in
+                if let repo = repo {
+                    self.repoData.accept(repo)
+                }
+            })
             .disposed(by: disposeBag)
     }
 }
