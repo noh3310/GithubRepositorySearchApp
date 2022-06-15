@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D335381B285A9116005B0D8A /* Reachability in Frameworks */ = {isa = PBXBuildFile; productRef = D335381A285A9116005B0D8A /* Reachability */; };
 		D3C6866828574F5B005DE942 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C6866728574F5B005DE942 /* AppDelegate.swift */; };
 		D3C6866A28574F5B005DE942 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C6866928574F5B005DE942 /* SceneDelegate.swift */; };
 		D3C6867128574F5C005DE942 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3C6867028574F5C005DE942 /* Assets.xcassets */; };
@@ -20,6 +21,14 @@
 		D3C686C42859C44A005DE942 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D3C686C32859C44A005DE942 /* RxSwift */; };
 		D3C686C72859C46F005DE942 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D3C686C62859C46F005DE942 /* Alamofire */; };
 		D3C686CA2859C489005DE942 /* RxAlamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D3C686C92859C489005DE942 /* RxAlamofire */; };
+		D3C686F02859D4D6005DE942 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C686ED2859D4D6005DE942 /* HomeView.swift */; };
+		D3C686F22859D4D6005DE942 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C686EF2859D4D6005DE942 /* HomeViewController.swift */; };
+		D3C686F52859E08D005DE942 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C686F42859E08D005DE942 /* APIKey.swift */; };
+		D3C686F72859E48D005DE942 /* Repositorys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C686F62859E48D005DE942 /* Repositorys.swift */; };
+		D3C686F92859E4CA005DE942 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C686F82859E4CA005DE942 /* APIManager.swift */; };
+		D3C68706285A3E96005DE942 /* ReactorKit in Frameworks */ = {isa = PBXBuildFile; productRef = D3C68705285A3E96005DE942 /* ReactorKit */; };
+		D3C68709285A3F9B005DE942 /* HomeViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C68708285A3F9B005DE942 /* HomeViewReactor.swift */; };
+		D3C6870F285A796A005DE942 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C6870E285A7969005DE942 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +41,13 @@
 		D3C6867C285764AC005DE942 /* SetViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetViews.swift; sourceTree = "<group>"; };
 		D3C686B92859BD59005DE942 /* RxBind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RxBind.swift; path = "../../../../Modify 폴더/Kurly-Assignment/Kurly-Assignment/Protocols/RxBind.swift"; sourceTree = "<group>"; };
 		D3C686BB2859C2E9005DE942 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		D3C686ED2859D4D6005DE942 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		D3C686EF2859D4D6005DE942 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D3C686F42859E08D005DE942 /* APIKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		D3C686F62859E48D005DE942 /* Repositorys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repositorys.swift; sourceTree = "<group>"; };
+		D3C686F82859E4CA005DE942 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		D3C68708285A3F9B005DE942 /* HomeViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewReactor.swift; sourceTree = "<group>"; };
+		D3C6870E285A7969005DE942 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,8 +57,10 @@
 			files = (
 				D3C686C72859C46F005DE942 /* Alamofire in Frameworks */,
 				D3C686C22859C44A005DE942 /* RxCocoa in Frameworks */,
+				D3C68706285A3E96005DE942 /* ReactorKit in Frameworks */,
 				D3C686BF2859C3E1005DE942 /* Kingfisher in Frameworks */,
 				D3C686CA2859C489005DE942 /* RxAlamofire in Frameworks */,
+				D335381B285A9116005B0D8A /* Reachability in Frameworks */,
 				D3C686C42859C44A005DE942 /* RxSwift in Frameworks */,
 				D3C6868028576D38005DE942 /* SnapKit in Frameworks */,
 			);
@@ -70,7 +88,10 @@
 		D3C6866628574F5B005DE942 /* Kurly-Assignment */ = {
 			isa = PBXGroup;
 			children = (
+				D3C68707285A3F82005DE942 /* ReactorKit */,
+				D3C686F32859E05B005DE942 /* APIManager */,
 				D3C6867B285764A2005DE942 /* Protocols */,
+				D3C686FE2859ED43005DE942 /* View */,
 				D3C6866728574F5B005DE942 /* AppDelegate.swift */,
 				D3C6866928574F5B005DE942 /* SceneDelegate.swift */,
 				D3C686BB2859C2E9005DE942 /* BaseViewController.swift */,
@@ -88,6 +109,50 @@
 				D3C686B92859BD59005DE942 /* RxBind.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		D3C686EC2859D4D6005DE942 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D3C686EF2859D4D6005DE942 /* HomeViewController.swift */,
+				D3C686ED2859D4D6005DE942 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D3C686F32859E05B005DE942 /* APIManager */ = {
+			isa = PBXGroup;
+			children = (
+				D3C686F82859E4CA005DE942 /* APIManager.swift */,
+				D3C686F42859E08D005DE942 /* APIKey.swift */,
+				D3C686F62859E48D005DE942 /* Repositorys.swift */,
+			);
+			path = APIManager;
+			sourceTree = "<group>";
+		};
+		D3C686FE2859ED43005DE942 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D3C686EC2859D4D6005DE942 /* Home */,
+				D3C68710285A7979005DE942 /* Detail */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D3C68707285A3F82005DE942 /* ReactorKit */ = {
+			isa = PBXGroup;
+			children = (
+				D3C68708285A3F9B005DE942 /* HomeViewReactor.swift */,
+			);
+			path = ReactorKit;
+			sourceTree = "<group>";
+		};
+		D3C68710285A7979005DE942 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				D3C6870E285A7969005DE942 /* DetailViewController.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -113,6 +178,8 @@
 				D3C686C32859C44A005DE942 /* RxSwift */,
 				D3C686C62859C46F005DE942 /* Alamofire */,
 				D3C686C92859C489005DE942 /* RxAlamofire */,
+				D3C68705285A3E96005DE942 /* ReactorKit */,
+				D335381A285A9116005B0D8A /* Reachability */,
 			);
 			productName = "Kurly-Assignment";
 			productReference = D3C6866428574F5B005DE942 /* Kurly-Assignment.app */;
@@ -148,6 +215,8 @@
 				D3C686C02859C44A005DE942 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				D3C686C52859C46F005DE942 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				D3C686C82859C489005DE942 /* XCRemoteSwiftPackageReference "RxAlamofire" */,
+				D3C68704285A3E96005DE942 /* XCRemoteSwiftPackageReference "ReactorKit" */,
+				D3353819285A9116005B0D8A /* XCRemoteSwiftPackageReference "Reachability.swift" */,
 			);
 			productRefGroup = D3C6866528574F5B005DE942 /* Products */;
 			projectDirPath = "";
@@ -176,9 +245,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3C686BA2859BD59005DE942 /* RxBind.swift in Sources */,
+				D3C686F72859E48D005DE942 /* Repositorys.swift in Sources */,
 				D3C6866828574F5B005DE942 /* AppDelegate.swift in Sources */,
 				D3C6866A28574F5B005DE942 /* SceneDelegate.swift in Sources */,
+				D3C686F92859E4CA005DE942 /* APIManager.swift in Sources */,
+				D3C686F22859D4D6005DE942 /* HomeViewController.swift in Sources */,
+				D3C6870F285A796A005DE942 /* DetailViewController.swift in Sources */,
+				D3C68709285A3F9B005DE942 /* HomeViewReactor.swift in Sources */,
+				D3C686F02859D4D6005DE942 /* HomeView.swift in Sources */,
 				D3C6867D285764AC005DE942 /* SetViews.swift in Sources */,
+				D3C686F52859E08D005DE942 /* APIKey.swift in Sources */,
 				D3C686BC2859C2EA005DE942 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -391,6 +467,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		D3353819285A9116005B0D8A /* XCRemoteSwiftPackageReference "Reachability.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ashleymills/Reachability.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		D3C6867E28576D38005DE942 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -431,9 +515,22 @@
 				minimumVersion = 6.1.0;
 			};
 		};
+		D3C68704285A3E96005DE942 /* XCRemoteSwiftPackageReference "ReactorKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactorKit/ReactorKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		D335381A285A9116005B0D8A /* Reachability */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D3353819285A9116005B0D8A /* XCRemoteSwiftPackageReference "Reachability.swift" */;
+			productName = Reachability;
+		};
 		D3C6867F28576D38005DE942 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D3C6867E28576D38005DE942 /* XCRemoteSwiftPackageReference "SnapKit" */;
@@ -463,6 +560,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D3C686C82859C489005DE942 /* XCRemoteSwiftPackageReference "RxAlamofire" */;
 			productName = RxAlamofire;
+		};
+		D3C68705285A3E96005DE942 /* ReactorKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D3C68704285A3E96005DE942 /* XCRemoteSwiftPackageReference "ReactorKit" */;
+			productName = ReactorKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
