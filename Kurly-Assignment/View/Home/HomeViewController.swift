@@ -30,7 +30,6 @@ final class HomeViewController: BaseViewController {
         
         homeView.tableView.delegate = self
         homeView.tableView.dataSource = self
-        homeView.tableView.prefetchDataSource = self
         
         homeView.searchController.searchResultsUpdater = self
         
@@ -50,35 +49,30 @@ final class HomeViewController: BaseViewController {
 extension HomeViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         if let searchText = searchController.searchBar.text {
-                viewModel.searchChar.accept(searchText)
-        }
-    }
-}
-
-extension HomeViewController:UITableViewDataSourcePrefetching {
-    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
-        indexPaths.forEach { indexPath in
-            // 마지막 셀 5개 이전에 도달했을 때
-            if indexPath.row + 5 > viewModel.repoData.value.items?.count ?? 0 {
-                // 다음 페이지 API 호출
-                
-            }
+            viewModel.searchChar.accept(searchText)
         }
     }
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
+    // 마지막 셀에 도달했을 때 다음 API를 호출해 무한스크롤처럼 가능하도록 설정
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row + 1 == viewModel.tableViewValue.value.count {
+            viewModel.addNumber()
+        }
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.repoData.value.items?.count ?? 0
+        return viewModel.tableViewValue.value.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: RepoTableViewCell.identifier, for: indexPath) as! RepoTableViewCell
         
-        let row = viewModel.repoData.value.items![indexPath.row]
+        let row = viewModel.tableViewValue.value[indexPath.row]
         let processor = DownsamplingImageProcessor(size: CGSize(width: 50, height: 50))
-        
+
         cell.profileImageView.kf.setImage(
             with: URL(string: (row.owner!.avatarURL!))!,
             options: [
@@ -86,15 +80,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
                 .scaleFactor(UIScreen.main.scale),
                 .cacheOriginalImage
             ])
-        {
-            result in
-            switch result {
-            case .success(let value):
-                print("Task done for: \(value.source.url?.absoluteString ?? "")")
-            case .failure(let error):
-                print("Job failed: \(error.localizedDescription)")
-            }
-        }
         
         cell.userIDView.text = row.fullName ?? ""
         
