@@ -10,7 +10,7 @@ import RxSwift
 import Alamofire
 import RxAlamofire
 
-private enum GithubURL: String {
+enum GithubURL: String {
     case searchRepository = "search/repositories"
 }
 
@@ -20,14 +20,16 @@ extension GithubURL {
     }
 }
 
-class APIManager {
+final class APIManager {
     
     let headers: HTTPHeaders = [
         "Accept": "application/vnd.github.v3+json",
         "Authorization": "token \(APIKey.key)"
     ]
     
-    func parameters(_ searchValue: String, _ pageNo: Int) -> Parameters {
+    func parameters(_ searchValue: String?, _ pageNo: Int) -> Parameters? {
+        guard let searchValue = searchValue else { return nil }
+        
         return [
             "q": searchValue,
             "per_page": "30",
