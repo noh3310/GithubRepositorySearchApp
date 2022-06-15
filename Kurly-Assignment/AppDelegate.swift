@@ -13,12 +13,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
         
         if #unavailable(iOS 13.0) {
             self.window = UIWindow()
-            let vc = UINavigationController(rootViewController: HomeViewController())
-            self.window!.rootViewController = vc
+            let vc = HomeViewController()
+            vc.reactor = HomeViewReactor()
+            self.window!.rootViewController = UINavigationController(rootViewController: vc)
             self.window!.makeKeyAndVisible()
         }
         
