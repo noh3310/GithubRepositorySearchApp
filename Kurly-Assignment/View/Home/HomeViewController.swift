@@ -16,6 +16,7 @@ final class HomeViewController: BaseViewController {
     
     let homeView = HomeView()
     
+    let viewModel = HomeViewModel.shared
     var disposeBag = DisposeBag()
     
     override func loadView() {
@@ -34,6 +35,12 @@ final class HomeViewController: BaseViewController {
         
         self.navigationItem.searchController = self.homeView.searchController
         self.navigationItem.hidesSearchBarWhenScrolling = false
+        
+        viewModel.repoData
+            .subscribe(onNext: { repo in
+                self.homeView.tableView.reloadData()
+            })
+            .disposed(by: disposeBag)
     }
     
 }
@@ -41,24 +48,41 @@ final class HomeViewController: BaseViewController {
 // MARK: Extension
 extension HomeViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
-        print(searchController.searchBar.text ?? "")
+        if let searchText = searchController.searchBar.text {
+                viewModel.searchChar.accept(searchText)
+        }
     }
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return viewModel.repoData.value.items?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: RepoTableViewCell.identifier, for: indexPath) as! RepoTableViewCell
         
-        if #available(iOS 13.0, *) {
-            cell.profileImageView.image = UIImage(systemName: "star")
-        } else {
-            // Fallback on earlier versions
+        let row = viewModel.repoData.value.items![indexPath.row]
+        let processor = DownsamplingImageProcessor(size: CGSize(width: 50, height: 50))
+        
+        cell.profileImageView.kf.setImage(
+            with: URL(string: (row.owner!.avatarURL!))!,
+            options: [
+                .processor(processor),
+                .scaleFactor(UIScreen.main.scale),
+                .cacheOriginalImage
+            ])
+        {
+            result in
+            switch result {
+            case .success(let value):
+                print("Task done for: \(value.source.url?.absoluteString ?? "")")
+            case .failure(let error):
+                print("Job failed: \(error.localizedDescription)")
+            }
         }
-        cell.userIDView.text = "data"
+        
+        cell.userIDView.text = row.fullName ?? ""
         
         return cell
     }

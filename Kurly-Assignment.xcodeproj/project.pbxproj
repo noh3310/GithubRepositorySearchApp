@@ -84,10 +84,10 @@
 		D3C6866628574F5B005DE942 /* Kurly-Assignment */ = {
 			isa = PBXGroup;
 			children = (
-				D3C686FA2859EB18005DE942 /* ViewModel */,
 				D3C686F32859E05B005DE942 /* APIManager */,
-				D3C686EC2859D4D6005DE942 /* Home */,
 				D3C6867B285764A2005DE942 /* Protocols */,
+				D3C686FA2859EB18005DE942 /* ViewModel */,
+				D3C686FE2859ED43005DE942 /* View */,
 				D3C6866728574F5B005DE942 /* AppDelegate.swift */,
 				D3C6866928574F5B005DE942 /* SceneDelegate.swift */,
 				D3C686BB2859C2E9005DE942 /* BaseViewController.swift */,
@@ -133,6 +133,14 @@
 				D3C686FB2859EB26005DE942 /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D3C686FE2859ED43005DE942 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D3C686EC2859D4D6005DE942 /* Home */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
