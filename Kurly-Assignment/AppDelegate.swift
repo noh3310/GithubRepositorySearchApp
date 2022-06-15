@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if #unavailable(iOS 13.0) {
             self.window = UIWindow()
-            let vc = ViewController()
+            let vc = BaseViewController()
             self.window!.rootViewController = vc
             self.window!.makeKeyAndVisible()
         }
