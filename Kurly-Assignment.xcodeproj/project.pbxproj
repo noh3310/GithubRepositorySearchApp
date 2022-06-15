@@ -9,24 +9,24 @@
 /* Begin PBXBuildFile section */
 		D3C6866828574F5B005DE942 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C6866728574F5B005DE942 /* AppDelegate.swift */; };
 		D3C6866A28574F5B005DE942 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C6866928574F5B005DE942 /* SceneDelegate.swift */; };
-		D3C6866C28574F5B005DE942 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C6866B28574F5B005DE942 /* ViewController.swift */; };
 		D3C6867128574F5C005DE942 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3C6867028574F5C005DE942 /* Assets.xcassets */; };
 		D3C6867428574F5C005DE942 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3C6867228574F5C005DE942 /* LaunchScreen.storyboard */; };
 		D3C6867D285764AC005DE942 /* SetViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C6867C285764AC005DE942 /* SetViews.swift */; };
 		D3C6868028576D38005DE942 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D3C6867F28576D38005DE942 /* SnapKit */; };
 		D3C686BA2859BD59005DE942 /* RxBind.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C686B92859BD59005DE942 /* RxBind.swift */; };
+		D3C686BC2859C2EA005DE942 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C686BB2859C2E9005DE942 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D3C6866428574F5B005DE942 /* Kurly-Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kurly-Assignment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3C6866728574F5B005DE942 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3C6866928574F5B005DE942 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D3C6866B28574F5B005DE942 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D3C6867028574F5C005DE942 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3C6867328574F5C005DE942 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D3C6867528574F5C005DE942 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3C6867C285764AC005DE942 /* SetViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetViews.swift; sourceTree = "<group>"; };
 		D3C686B92859BD59005DE942 /* RxBind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RxBind.swift; path = "../../../../Modify 폴더/Kurly-Assignment/Kurly-Assignment/Protocols/RxBind.swift"; sourceTree = "<group>"; };
+		D3C686BB2859C2E9005DE942 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +63,7 @@
 				D3C6867B285764A2005DE942 /* Protocols */,
 				D3C6866728574F5B005DE942 /* AppDelegate.swift */,
 				D3C6866928574F5B005DE942 /* SceneDelegate.swift */,
-				D3C6866B28574F5B005DE942 /* ViewController.swift */,
+				D3C686BB2859C2E9005DE942 /* BaseViewController.swift */,
 				D3C6867028574F5C005DE942 /* Assets.xcassets */,
 				D3C6867228574F5C005DE942 /* LaunchScreen.storyboard */,
 				D3C6867528574F5C005DE942 /* Info.plist */,
@@ -157,10 +157,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3C686BA2859BD59005DE942 /* RxBind.swift in Sources */,
-				D3C6866C28574F5B005DE942 /* ViewController.swift in Sources */,
 				D3C6866828574F5B005DE942 /* AppDelegate.swift in Sources */,
 				D3C6866A28574F5B005DE942 /* SceneDelegate.swift in Sources */,
 				D3C6867D285764AC005DE942 /* SetViews.swift in Sources */,
+				D3C686BC2859C2EA005DE942 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
