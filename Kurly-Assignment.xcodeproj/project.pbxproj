@@ -23,6 +23,7 @@
 		D3C686F02859D4D6005DE942 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C686ED2859D4D6005DE942 /* HomeView.swift */; };
 		D3C686F12859D4D6005DE942 /* RepoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C686EE2859D4D6005DE942 /* RepoTableViewCell.swift */; };
 		D3C686F22859D4D6005DE942 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C686EF2859D4D6005DE942 /* HomeViewController.swift */; };
+		D3C686F52859E08D005DE942 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C686F42859E08D005DE942 /* APIKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		D3C686ED2859D4D6005DE942 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		D3C686EE2859D4D6005DE942 /* RepoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoTableViewCell.swift; sourceTree = "<group>"; };
 		D3C686EF2859D4D6005DE942 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D3C686F42859E08D005DE942 /* APIKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 		D3C6866628574F5B005DE942 /* Kurly-Assignment */ = {
 			isa = PBXGroup;
 			children = (
+				D3C686F32859E05B005DE942 /* APIManager */,
 				D3C686EC2859D4D6005DE942 /* Home */,
 				D3C6867B285764A2005DE942 /* Protocols */,
 				D3C6866728574F5B005DE942 /* AppDelegate.swift */,
@@ -105,6 +108,14 @@
 				D3C686EE2859D4D6005DE942 /* RepoTableViewCell.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		D3C686F32859E05B005DE942 /* APIManager */ = {
+			isa = PBXGroup;
+			children = (
+				D3C686F42859E08D005DE942 /* APIKey.swift */,
+			);
+			path = APIManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +210,7 @@
 				D3C686F12859D4D6005DE942 /* RepoTableViewCell.swift in Sources */,
 				D3C686F02859D4D6005DE942 /* HomeView.swift in Sources */,
 				D3C6867D285764AC005DE942 /* SetViews.swift in Sources */,
+				D3C686F52859E08D005DE942 /* APIKey.swift in Sources */,
 				D3C686BC2859C2EA005DE942 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
