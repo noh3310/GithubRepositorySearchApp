@@ -25,7 +25,6 @@
 		D3C686F52859E08D005DE942 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C686F42859E08D005DE942 /* APIKey.swift */; };
 		D3C686F72859E48D005DE942 /* Repositorys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C686F62859E48D005DE942 /* Repositorys.swift */; };
 		D3C686F92859E4CA005DE942 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C686F82859E4CA005DE942 /* APIManager.swift */; };
-		D3C686FC2859EB27005DE942 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C686FB2859EB26005DE942 /* HomeViewModel.swift */; };
 		D3C68706285A3E96005DE942 /* ReactorKit in Frameworks */ = {isa = PBXBuildFile; productRef = D3C68705285A3E96005DE942 /* ReactorKit */; };
 		D3C68709285A3F9B005DE942 /* HomeViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C68708285A3F9B005DE942 /* HomeViewReactor.swift */; };
 		D3C6870F285A796A005DE942 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C6870E285A7969005DE942 /* DetailViewController.swift */; };
@@ -46,7 +45,6 @@
 		D3C686F42859E08D005DE942 /* APIKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		D3C686F62859E48D005DE942 /* Repositorys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repositorys.swift; sourceTree = "<group>"; };
 		D3C686F82859E4CA005DE942 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
-		D3C686FB2859EB26005DE942 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		D3C68708285A3F9B005DE942 /* HomeViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewReactor.swift; sourceTree = "<group>"; };
 		D3C6870E285A7969005DE942 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,7 +89,6 @@
 				D3C68707285A3F82005DE942 /* ReactorKit */,
 				D3C686F32859E05B005DE942 /* APIManager */,
 				D3C6867B285764A2005DE942 /* Protocols */,
-				D3C686FA2859EB18005DE942 /* ViewModel */,
 				D3C686FE2859ED43005DE942 /* View */,
 				D3C6866728574F5B005DE942 /* AppDelegate.swift */,
 				D3C6866928574F5B005DE942 /* SceneDelegate.swift */,
@@ -129,14 +126,6 @@
 				D3C686F62859E48D005DE942 /* Repositorys.swift */,
 			);
 			path = APIManager;
-			sourceTree = "<group>";
-		};
-		D3C686FA2859EB18005DE942 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				D3C686FB2859EB26005DE942 /* HomeViewModel.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		D3C686FE2859ED43005DE942 /* View */ = {
@@ -259,7 +248,6 @@
 				D3C686F22859D4D6005DE942 /* HomeViewController.swift in Sources */,
 				D3C6870F285A796A005DE942 /* DetailViewController.swift in Sources */,
 				D3C68709285A3F9B005DE942 /* HomeViewReactor.swift in Sources */,
-				D3C686FC2859EB27005DE942 /* HomeViewModel.swift in Sources */,
 				D3C686F02859D4D6005DE942 /* HomeView.swift in Sources */,
 				D3C6867D285764AC005DE942 /* SetViews.swift in Sources */,
 				D3C686F52859E08D005DE942 /* APIKey.swift in Sources */,
